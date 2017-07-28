@@ -1,0 +1,14 @@
+---
+applications:
+- name: number-search-app
+  memory: 768M
+  instances: 1
+  random-route: true
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  path: C:/workspace/number-search-app/target/number-search-app-1.0.jar
+  timeout: 160
+  services:
+  - service-registry
+  - config-server
+  - logging
+  command: null
